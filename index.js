@@ -73,5 +73,97 @@ for (let key in refresco ) {
 
 	console.log(`La propiedad es ${key} y su valor es ${refresco[key]}`)
 
-
 }
+
+
+// ARREGLOS CON OBJETOS
+// 					  0   1    2
+const arrNumbers = [5873,4687,5000]
+
+console.log(arrNumbers[0]) // => 5873
+console.log(arrNumbers[1]) // => 4687
+console.log(arrNumbers[2]) // => 5000
+
+
+
+const mike = [
+	{
+		name: "Mike",
+		age: 34
+	}
+]
+
+console.log(mike[0].age) // => 34
+
+
+let estudiantesIH = [
+	{
+		name: "Leo",
+		location: "Querétaro",
+		weather: "Frijolito"
+	},
+	{
+		name: "Joaquín",
+		location: "Hidalgo",
+		weather: "Frijolito duro"
+	},
+	{
+		name: "Alan",
+		location: "Atizapan",
+		weather: "Frijolito poquito"
+	},
+	{
+		name: "Alexis",
+		location: "Aguascalientes",
+		weather: "Frijolito poquito"
+	}
+]
+
+
+console.log(estudiantesIH[2].location) // => "Atizapan"
+
+// JS TRADICIONAL - ES5
+estudiantesIH.push({
+	name: "Emmanuel",
+	location: "CDMX",
+	weather: "Calorcito"
+})
+
+console.log(estudiantesIH)
+
+// JS MODERNO - ES6
+estudiantesIH = [
+	...estudiantesIH, // SPREAD OPERATOR
+	{
+		name: "Roman",
+		location: "CDMX",
+		weather: "Calorcito"
+	}
+]
+
+console.log(estudiantesIH)
+
+
+const animales = [
+	{
+		name: "Firulais",
+		tipo: "perro",
+		color: "negro"
+	},
+	{
+		name: "Michi",
+		tipo: "gato",
+		color: "gris"
+	},
+	{
+		name: "Nemo",
+		tipo: "pez",
+		color: "naranja"
+	},
+
+]
+
+
+console.log(`El color del primer animal es ${animales[0].color}`)
+console.log(`El nombre del segundo animal es ${animales[1].name}`)
+console.log(`El tipo del tercer animal es ${animales[2].tipo}`)
